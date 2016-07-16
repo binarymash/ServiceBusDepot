@@ -57,10 +57,15 @@ namespace ServiceBusDepot.ConsoleHost.Features
 
             while (true)
             {
-                var selection = System.Console.ReadLine().ToLowerInvariant();
-                if (PageOptions.ContainsKey(selection))
+                System.Console.Write("> ");
+                using (ConsoleColorManager.InputOption)
                 {
-                    return PageOptions[selection].Action;
+                    var selection = System.Console.ReadLine().ToLowerInvariant();
+
+                    if (PageOptions.ContainsKey(selection))
+                    {
+                        return PageOptions[selection].Action;
+                    }
                 }
 
                 using (ConsoleColorManager.ErrorMessage)
@@ -78,6 +83,7 @@ namespace ServiceBusDepot.ConsoleHost.Features
             {
                 ShowPageOption(pageOption);
             }
+            System.Console.WriteLine();
         }
 
         protected void ShowPageOption(PageOption pageOption)

@@ -196,6 +196,9 @@
     <Compile Include="Features\Application\Main\RequestHandler.cs" />
     <Compile Include="Features\PageOption.cs" />
     <Compile Include="Features\PageRequestHandler.cs" />
+    <Compile Include="Features\Queues\Listen\PageOption.cs" />
+    <Compile Include="Features\Queues\Listen\Request.cs" />
+    <Compile Include="Features\Queues\Listen\RequestHandler.cs" />
     <Compile Include="Features\ServiceBusConnections\Create\PageOption.cs" />
     <Compile Include="Features\ServiceBusConnections\Create\Request.cs" />
     <Compile Include="Features\ServiceBusConnections\Create\RequestHandler.cs" />
@@ -222,6 +225,7 @@
       <Name>ServiceBusDepot.Core</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

@@ -5,7 +5,7 @@
 
     public class RequestHandler : PageRequestHandler<Request>
     {
-        public RequestHandler(IMediator mediator) : base("Main Menu", mediator)
+        public RequestHandler(IMediator mediator) : base("Service Bus Depot", mediator)
         {
         }
 
