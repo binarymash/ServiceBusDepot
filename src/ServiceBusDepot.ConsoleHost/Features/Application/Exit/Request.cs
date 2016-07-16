@@ -1,4 +1,4 @@
-﻿namespace ServiceBusDepot.ConsoleHost.Features.Exit
+﻿namespace ServiceBusDepot.ConsoleHost.Features.Application.Exit
 {
     using MediatR;
 

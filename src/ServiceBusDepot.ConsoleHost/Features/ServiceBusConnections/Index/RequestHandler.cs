@@ -31,7 +31,7 @@ namespace ServiceBusDepot.ConsoleHost.Features.ServiceBusConnections.Index
                 pageOptions.Add(new ServiceBusConnections.Details.PageOption(connection.ServiceBusConnectionId.ToString(), connection.ServiceBusConnectionId, connection.Description));
             };
 
-            pageOptions.Add(new Exit.PageOption("X"));
+            pageOptions.Add(new Application.Exit.PageOption("X"));
 
             return GetNextAction(pageOptions);
         }

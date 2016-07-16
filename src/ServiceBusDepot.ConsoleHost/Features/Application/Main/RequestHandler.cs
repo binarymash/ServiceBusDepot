@@ -1,4 +1,4 @@
-﻿namespace ServiceBusDepot.ConsoleHost.Features.Main
+﻿namespace ServiceBusDepot.ConsoleHost.Features.Application.Main
 {
     using MediatR;
     using System.Collections.Generic;

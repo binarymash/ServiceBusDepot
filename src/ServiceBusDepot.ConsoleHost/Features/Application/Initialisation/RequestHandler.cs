@@ -1,4 +1,4 @@
-﻿namespace ServiceBusDepot.ConsoleHost.Features.Initial
+﻿namespace ServiceBusDepot.ConsoleHost.Features.Application.Initialisation
 {
     using System;
     using MediatR;
@@ -23,7 +23,7 @@
 
             }
 
-            return new Features.Main.Request();
+            return new Features.Application.Main.Request();
         }
     }
 }

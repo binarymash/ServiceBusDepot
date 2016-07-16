@@ -10,7 +10,7 @@ namespace ServiceBusDepot.ConsoleHost
             IUnityContainer _container = new UnityContainer();
             _container.AddNewExtension<Configuration.UnityRegistrations>();
 
-            _container.Resolve<Application>().Run(new Features.Initial.Request());
+            _container.Resolve<Application>().Run(new Features.Application.Initialisation.Request());
         }
 
     }

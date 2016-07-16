@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace ServiceBusDepot.ConsoleHost.Features.Exit
+namespace ServiceBusDepot.ConsoleHost.Features.Application.Exit
 {
     public class RequestHandler : PageRequestHandler<Request>
     {
