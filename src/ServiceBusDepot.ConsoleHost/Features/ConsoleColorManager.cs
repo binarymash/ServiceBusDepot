@@ -8,7 +8,8 @@
 
         public static ConsoleColorRegion InputOption { get { return new ConsoleColorRegion(System.ConsoleColor.Green); } }
 
-        public static ConsoleColorRegion ErrorMessage{ get { return new ConsoleColorRegion(System.ConsoleColor.Red); } }
+        public static ConsoleColorRegion ErrorMessage{  get { return new ConsoleColorRegion(System.ConsoleColor.Red); } }
 
+        public static ConsoleColorRegion Data { get { return new ConsoleColorRegion(System.ConsoleColor.White); } }
     }
 }

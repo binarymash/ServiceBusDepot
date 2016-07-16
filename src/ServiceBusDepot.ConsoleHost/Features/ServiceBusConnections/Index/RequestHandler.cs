@@ -18,7 +18,16 @@ namespace ServiceBusDepot.ConsoleHost.Features.ServiceBusConnections.Index
 
             foreach (var connection in connections)
             {
-                System.Console.WriteLine(string.Format("Id: {0}; Description: {1}", connection.ServiceBusConnectionId, connection.Description));
+                System.Console.Write("Id: ");
+                using (ConsoleColorManager.Data)
+                {
+                    System.Console.Write(connection.ServiceBusConnectionId);
+                }
+                System.Console.Write("; Description: ");
+                using (ConsoleColorManager.Data)
+                {
+                    System.Console.WriteLine(connection.Description);
+                }
             }
 
             var pageOptions = new List<Features.PageOption>()
