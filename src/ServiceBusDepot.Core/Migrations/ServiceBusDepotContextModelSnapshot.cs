@@ -24,8 +24,6 @@ namespace ServiceBusDepot.Core.Migrations
 
                     b.Property<string>("Description");
 
-                    b.Property<string>("Uri");
-
                     b.HasKey("ServiceBusConnectionId");
 
                     b.ToTable("Connections");

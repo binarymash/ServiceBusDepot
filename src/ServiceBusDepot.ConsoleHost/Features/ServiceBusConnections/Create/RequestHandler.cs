@@ -10,17 +10,10 @@
 
         public override IPageRequest Handle(Request message)
         {
-            string uri;
             string connectionString;
             string description;
 
-            System.Console.Write("Enter the URI: ");
-            using (ConsoleColorManager.InputOption)
-            {
-                uri = System.Console.ReadLine();
-            }
-
-            System.Console.Write("Enter the connection string: ");
+            System.Console.Write("Enter the connection string for the service bus namespace: ");
             using (ConsoleColorManager.InputOption)
             {
                 connectionString = System.Console.ReadLine();
@@ -33,7 +26,7 @@
             }
 
 
-            var command = new Core.Features.ServiceBusConnection.Create.Command(uri, connectionString, description);
+            var command = new Core.Features.ServiceBusConnection.Create.Command(connectionString, description);
             var result = Mediator.SendAsync<int>(command);
 
             System.Console.WriteLine("Connection string created.");

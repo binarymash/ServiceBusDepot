@@ -201,9 +201,9 @@
     <Compile Include="Features\ServiceBusConnection\Index\QueryHandler.cs" />
     <Compile Include="Features\ServiceBusConnection\MappingProfile.cs" />
     <Compile Include="Entities\ServiceBusConnection.cs" />
-    <Compile Include="Migrations\20160716175045_ServiceBusConnections.cs" />
-    <Compile Include="Migrations\20160716175045_ServiceBusConnections.designer.cs">
-      <DependentUpon>20160716175045_ServiceBusConnections.cs</DependentUpon>
+    <Compile Include="Migrations\20160717130116_ServiceBusConnections.cs" />
+    <Compile Include="Migrations\20160717130116_ServiceBusConnections.designer.cs">
+      <DependentUpon>20160717130116_ServiceBusConnections.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\ServiceBusDepotContextModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

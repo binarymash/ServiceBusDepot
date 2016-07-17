@@ -4,8 +4,6 @@
     {
         public int ServiceBusConnectionId { get; set; }
 
-        public string Uri { get; set; }
-
         public string Description { get; set; }
     }
 }

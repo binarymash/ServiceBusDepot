@@ -15,8 +15,7 @@ namespace ServiceBusDepot.Core.Migrations
                     ServiceBusConnectionId = table.Column<int>(nullable: false)
                         .Annotation("Autoincrement", true),
                     ConnectionString = table.Column<string>(nullable: true),
-                    Description = table.Column<string>(nullable: true),
-                    Uri = table.Column<string>(nullable: true)
+                    Description = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

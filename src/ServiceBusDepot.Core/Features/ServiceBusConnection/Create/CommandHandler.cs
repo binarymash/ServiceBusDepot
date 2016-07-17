@@ -22,8 +22,7 @@ namespace ServiceBusDepot.Core.Features.ServiceBusConnection.Create
         {
             var connection = _mapper.Map<Entities.ServiceBusConnection>(message);
             _database.Connections.Add(connection);
-            await _database.SaveChangesAsync();
-            return 0;
+            return await _database.SaveChangesAsync();
         }
     }
 }

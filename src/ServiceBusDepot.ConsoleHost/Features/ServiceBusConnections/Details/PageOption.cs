@@ -8,5 +8,9 @@
             new ServiceBusConnections.Details.Request(id))
         {
         }
+
+        public PageOption(string key, int id) : base(key, "Service Bus Connection Details", new ServiceBusConnections.Details.Request(id))
+        {
+        }
     }
 }

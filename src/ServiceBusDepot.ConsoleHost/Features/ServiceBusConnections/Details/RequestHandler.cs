@@ -23,7 +23,10 @@ namespace ServiceBusDepot.ConsoleHost.Features.ServiceBusConnections.Details
                 queueDictionary.Add(++queueKey, queue);
             }
 
-            foreach(var key in queueDictionary.Keys)
+            System.Console.WriteLine("Queues:");
+            System.Console.WriteLine();
+
+            foreach (var key in queueDictionary.Keys)
             {
                 System.Console.Write("Path: ");
                 using (ConsoleColorManager.Data)

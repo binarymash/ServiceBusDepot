@@ -8,7 +8,7 @@ using ServiceBusDepot.Core.Database;
 namespace ServiceBusDepot.Core.Migrations
 {
     [DbContext(typeof(ServiceBusDepotContext))]
-    [Migration("20160716175045_ServiceBusConnections")]
+    [Migration("20160717130116_ServiceBusConnections")]
     partial class ServiceBusConnections
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,8 +24,6 @@ namespace ServiceBusDepot.Core.Migrations
                     b.Property<string>("ConnectionString");
 
                     b.Property<string>("Description");
-
-                    b.Property<string>("Uri");
 
                     b.HasKey("ServiceBusConnectionId");
 

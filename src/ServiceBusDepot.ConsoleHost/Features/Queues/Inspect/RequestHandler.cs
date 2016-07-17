@@ -4,8 +4,6 @@ namespace ServiceBusDepot.ConsoleHost.Features.Queues.Inspect
 {
     public class RequestHandler : PageRequestHandler<Request>
     {
-        private string _queueName;
-
         public RequestHandler(IMediator mediator) : base(string.Format("Messages on queue"), mediator)
         {
         }
@@ -22,14 +20,14 @@ namespace ServiceBusDepot.ConsoleHost.Features.Queues.Inspect
                 {
                     System.Console.WriteLine(queueMessage.MessageId);
                 }
-                System.Console.Write("Message count: ");
+                System.Console.Write("Body: ");
                 using (ConsoleColorManager.Data)
                 {
                     System.Console.WriteLine(queueMessage.Body);
                 }
             }
 
-            return GetNextAction(new ServiceBusConnections.Details.PageOption("R", message.ServiceBusConnectionId, _queueName));
+            return GetNextAction(new ServiceBusConnections.Details.PageOption("R", message.ServiceBusConnectionId));
         }
     }
 }
