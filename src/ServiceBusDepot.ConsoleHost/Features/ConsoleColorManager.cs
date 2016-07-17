@@ -11,5 +11,9 @@
         public static ConsoleColorRegion ErrorMessage{  get { return new ConsoleColorRegion(System.ConsoleColor.Red); } }
 
         public static ConsoleColorRegion Data { get { return new ConsoleColorRegion(System.ConsoleColor.White); } }
+
+        public static ConsoleColorRegion OddDataRow { get { return new ConsoleColorRegion(System.ConsoleColor.White); } }
+
+        public static ConsoleColorRegion EvenDataRow { get { return new ConsoleColorRegion(System.ConsoleColor.Gray); } }
     }
 }

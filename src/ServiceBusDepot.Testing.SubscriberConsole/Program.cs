@@ -75,7 +75,6 @@ namespace ServiceBusDepot.Testing.SubscriberConsole
                     "ServiceBusDepot.Testing.SubscriberConsole-SomethingAmazingHappened",
                     cfg =>
                     {
-                        cfg.UseRetry(Retry.Interval(1, TimeSpan.FromSeconds(1)));
                         cfg.MaxConcurrentCalls = 1;
                         cfg.PrefetchCount = 5;
                         cfg.Consumer(() => new SomethingAmazingHappenedConsumer());

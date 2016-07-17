@@ -1,13 +1,10 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using MediatR;
 using ServiceBusDepot.Core.Database;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.ServiceBus;
 using Microsoft.ServiceBus.Messaging;
 using System.Collections.Generic;
-using System.IO;
 
 namespace ServiceBusDepot.Core.Features.Queue.Inspect
 {

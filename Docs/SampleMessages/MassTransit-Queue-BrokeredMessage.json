@@ -1,0 +1,47 @@
+{
+	"MessageId": "d634000042d0001c28ac08d3ae4a3d97",
+	"Body": "{  	
+		"messageId": "d6340000-42d0-001c-28ac-08d3ae4a3d97",  
+		"conversationId": "d6340000-42d0-001c-c341-08d3ae4a3d9a",  
+		"sourceAddress": "sb://[REDACTED]_ServiceBusDepotTestingPublisherConsolevshost_bus_4a4yyynn4yybasudbdj4h1txny?express=true&autodelete=300",  
+		"destinationAddress": "sb://[REDACTED]/ServiceBusDepot.Testing.Messages/SomethingAmazingHappened",  
+		"messageType": [    
+			"urn: message: ServiceBusDepot.Testing.Messages: SomethingAmazingHappened"
+		],  
+		"message": {    
+			"descriptionOfHowAmazingItWas": "prettygood",    
+			"amazingness": 7  
+		},  
+		"headers": {},  
+		"host": {    
+			"machineName": "PHILIPWOOD1903",    
+			"processName": "ServiceBusDepot.Testing.PublisherConsole.vshost",    
+			"processId": 9244,    
+			"assembly": "ServiceBusDepot.Testing.PublisherConsole",    
+			"assemblyVersion": "1.0.0.0",    
+			"frameworkVersion": "4.0.30319.42000",    
+			"massTransitVersion": "3.3.5.688",    
+			"operatingSystemVersion": "MicrosoftWindowsNT6.2.9200.0"  
+		}}",
+	"ContentType": "application/vnd.masstransit+json",
+	"CorrelationId": null,
+	"DeadLetterSource": null,
+	"DeliveryCount": 1,
+	"EnqueuedSequenceNumber": 0,
+	"EnqueuedTimeUtc": "2016-07-17T13:57:08.449Z",
+	"ExpiresAtUtc": "9999-12-31T23:59:59.9999999",
+	"ForcePersistance": false,
+	"IsBodyConsumed": false,
+	"Label": null,
+	"PartitionKey": null,
+	"Properties": {},
+	"ReplyTo": null,
+	"ReplyToSessionId": null,
+	"ScheduledEnqueueTimeUtc": "0001-01-01T00:00:00",
+	"SequenceNumber": 8,
+	"SessionId": null,
+	"Size": 1402,
+	"TimeToLive": "10675199.02:48:05.4775807",
+	"To": null,
+	"ViaPartitionKey": null
+}

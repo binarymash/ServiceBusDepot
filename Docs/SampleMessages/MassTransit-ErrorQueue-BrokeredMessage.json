@@ -1,0 +1,61 @@
+{
+	"MessageId": "d634000042d0001c28ac08d3ae4a3d97",
+	"Body": "{  
+		"messageId": "d6340000-42d0-001c-28ac-08d3ae4a3d97",  
+		"conversationId": "d6340000-42d0-001c-c341-08d3ae4a3d9a",  
+		"sourceAddress": "sb://[REDACTED]_ServiceBusDepotTestingPublisherConsolevshost_bus_4a4yyynn4yybasudbdj4h1txny?express=true&autodelete=300",  
+		"destinationAddress": "sb://[REDACTED]/ServiceBusDepot.Testing.Messages/SomethingAmazingHappened",  
+		"messageType": [    
+			"urn: message: ServiceBusDepot.Testing.Messages: SomethingAmazingHappened"  
+		],  
+		"message": {    
+			"descriptionOfHowAmazingItWas": "prettygood",    
+			"amazingness": 7  
+		},  
+		"headers": {},
+		"host": {    
+			"machineName": "PHILIPWOOD1903",    
+			"processName": "ServiceBusDepot.Testing.PublisherConsole.vshost",    
+			"processId": 9244,    
+			"assembly": "ServiceBusDepot.Testing.PublisherConsole",    
+			"assemblyVersion": "1.0.0.0",    
+			"frameworkVersion": "4.0.30319.42000",    
+			"massTransitVersion": "3.3.5.688",    
+			"operatingSystemVersion": "MicrosoftWindowsNT6.2.9200.0"  
+		}
+	}",
+	"ContentType": "application/vnd.masstransit+json",
+	"CorrelationId": null,
+	"DeadLetterSource": null,
+	"DeliveryCount": 1,
+	"EnqueuedSequenceNumber": 0,
+	"EnqueuedTimeUtc": "2016-07-17T15:07:13.303Z",
+	"ExpiresAtUtc": "2016-08-04T15:47:42.231Z",
+	"ForcePersistance": false,
+	"IsBodyConsumed": false,
+	"Label": null,
+	"PartitionKey": null,
+	"Properties": {
+		"MT-Reason": "fault",
+		"MT-Fault-Message": "The method or operation is not implemented.",
+		"MT-Fault-Timestamp": "2016-07-17T15:07:12.7403950Z",
+		"MT-Fault-StackTrace": "   at ServiceBusDepot.Testing.SubscriberConsole.SomethingAmazingHappenedConsumer.Consume(ConsumeContext`1 context) in C:\\dev\\ServiceBusDepot\\src\\ServiceBusDepot.Testing.SubscriberConsole\\SomethingAmazingHappenedConsumer.cs:line 18   at MassTransit.Pipeline.Filters.MethodConsumerMessageFilter`2.MassTransit.Pipeline.IFilter<MassTransit.ConsumerConsumeContext<TConsumer,TMessage>>.Send(ConsumerConsumeContext`2 context, IPipe`1 next)   at MassTransit.Pipeline.Pipes.LastPipe`1.Send(T context)   at MassTransit.Pipeline.ConsumerFactories.DelegateConsumerFactory`1.<Send>d__2`1.MoveNext()at MassTransit.Pipeline.Filters.ConsumerMessageFilter`2.<MassTransit-Pipeline-IFilter<MassTransit-ConsumeContext<TMessage>>-Send>d__4.MoveNext()--- End of stack trace from previous location where exception was thrown ---   at MassTransit.Pipeline.Filters.ConsumerMessageFilter`2.<MassTransit-Pipeline-IFilter<MassTransit-ConsumeContext<TMessage>>-Send>d__4.MoveNext()at MassTransit.Pipeline.Filters.TeeConsumeFilter`1.<>c__DisplayClass7_0.<<Send>b__0>d.MoveNext()at MassTransit.Pipeline.Filters.TeeConsumeFilter`1.<Send>d__7.MoveNext()at MassTransit.Pipeline.Filters.MessageConsumeFilter`1.<MassTransit-Pipeline-IFilter<MassTransit-ConsumeContext>-Send>d__7.MoveNext()--- End of stack trace from previous location where exception was thrown ---   at MassTransit.Pipeline.Filters.MessageConsumeFilter`1.<MassTransit-Pipeline-IFilter<MassTransit-ConsumeContext>-Send>d__7.MoveNext()at MassTransit.Pipeline.Filters.DeserializeFilter.<Send>d__4.MoveNext()at MassTransit.Pipeline.Filters.RescueReceiveContextFilter`1.<MassTransit-Pipeline-IFilter<MassTransit-ReceiveContext>-Send>d__5.MoveNext()",
+		"MT-Host-MachineName": "PHILIPWOOD1903",
+		"MT-Host-ProcessName": "ServiceBusDepot.Testing.SubscriberConsole",
+		"MT-Host-ProcessId": "4724",
+		"MT-Host-Assembly": "ServiceBusDepot.Testing.SubscriberConsole",
+		"MT-Host-AssemblyVersion": "1.0.0.0",
+		"MT-Host-MassTransitVersion": "3.3.5.688",
+		"MT-Host-FrameworkVersion": "4.0.30319.42000",
+		"MT-Host-OperatingSystemVersion": "Microsoft Windows NT 6.2.9200.0"
+	},
+	"ReplyTo": null,
+	"ReplyToSessionId": null,
+	"ScheduledEnqueueTimeUtc": "0001-01-01T00:00:00",
+	"SequenceNumber": 5,
+	"SessionId": null,
+	"Size": 3439,
+	"TimeToLive": "18.00:40:28.9280000",
+	"To": null,
+	"ViaPartitionKey": null
+}
