@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using ServiceBusDepot.Core.Database;
 
-namespace ServiceBus.UnitTests.Core.Features
+namespace ServiceBusDepot.Testing.UnitTests.Core.Features
 {
     public class FeaturesSpecs<T> where T : Profile, new()
     {

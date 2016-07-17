@@ -7,8 +7,8 @@
     <ProjectGuid>{422927FD-3D07-48F8-B548-020E03F60D76}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ServiceBus.UnitTests</RootNamespace>
-    <AssemblyName>ServiceBus.UnitTests</AssemblyName>
+    <RootNamespace>ServiceBusDepot.Testing.UnitTests</RootNamespace>
+    <AssemblyName>ServiceBusDepot.Testing.UnitTests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

@@ -2,7 +2,7 @@
 {
     public static class ConsoleColorManager
     {
-        public static ConsoleColorRegion Title { get { return new ConsoleColorRegion(System.ConsoleColor.Yellow); } }
+        public static ConsoleColorRegion Title { get { return new ConsoleColorRegion(System.ConsoleColor.Yellow, System.ConsoleColor.DarkBlue); } }
 
         public static ConsoleColorRegion Header { get { return new ConsoleColorRegion(System.ConsoleColor.Yellow); } }
 

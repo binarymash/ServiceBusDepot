@@ -196,6 +196,9 @@
     <Compile Include="Features\Application\Main\RequestHandler.cs" />
     <Compile Include="Features\PageOption.cs" />
     <Compile Include="Features\PageRequestHandler.cs" />
+    <Compile Include="Features\Queues\Inspect\PageOption.cs" />
+    <Compile Include="Features\Queues\Inspect\Request.cs" />
+    <Compile Include="Features\Queues\Inspect\RequestHandler.cs" />
     <Compile Include="Features\Queues\Listen\PageOption.cs" />
     <Compile Include="Features\Queues\Listen\Request.cs" />
     <Compile Include="Features\Queues\Listen\RequestHandler.cs" />

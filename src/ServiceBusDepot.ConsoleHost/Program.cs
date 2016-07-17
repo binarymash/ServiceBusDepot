@@ -7,6 +7,8 @@ namespace ServiceBusDepot.ConsoleHost
     {
         static void Main(string[] args)
         {
+            System.Console.Title = "Service Bus Depot";
+
             IUnityContainer _container = new UnityContainer();
             _container.AddNewExtension<Configuration.UnityRegistrations>();
 

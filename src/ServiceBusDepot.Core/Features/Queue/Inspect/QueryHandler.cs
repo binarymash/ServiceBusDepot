@@ -1,12 +1,15 @@
-﻿using AutoMapper;
+﻿using System;
+using System.Threading.Tasks;
 using MediatR;
+using ServiceBusDepot.Core.Database;
+using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.ServiceBus;
-using ServiceBusDepot.Core.Database;
+using Microsoft.ServiceBus.Messaging;
 using System.Collections.Generic;
-using System.Threading.Tasks;
+using System.IO;
 
-namespace ServiceBusDepot.Core.Features.ServiceBusConnection.Details
+namespace ServiceBusDepot.Core.Features.Queue.Inspect
 {
     public class QueryHandler : IAsyncRequestHandler<Query, Model>
     {
@@ -24,11 +27,11 @@ namespace ServiceBusDepot.Core.Features.ServiceBusConnection.Details
         {
             var connection = await _database.Connections.FirstAsync(c => c.ServiceBusConnectionId == message.ServiceBusConnectionId);
 
-            var namespaceManager = NamespaceManager.CreateFromConnectionString(connection.ConnectionString);
+            var queueClient = QueueClient.CreateFromConnectionString(connection.ConnectionString, message.QueuePath, ReceiveMode.PeekLock);
 
-            var queueDescriptions = await namespaceManager.GetQueuesAsync();
+            var brokeredMessages = await queueClient.PeekBatchAsync(100);
 
-            return new Model(connection.ServiceBusConnectionId, connection.Description, _mapper.Map<IEnumerable<Queue>>(queueDescriptions));
+            return new Model(connection.ServiceBusConnectionId, connection.Description, _mapper.Map<IEnumerable<Message>>(brokeredMessages));
         }
     }
 }

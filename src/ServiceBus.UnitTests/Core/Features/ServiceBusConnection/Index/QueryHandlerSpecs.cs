@@ -1,10 +1,11 @@
-﻿namespace ServiceBus.UnitTests.Core.Features.ServiceBusConnection.Index
+﻿using System.Collections.Generic;
+using ServiceBusDepot.Core.Features.ServiceBusConnection.Index;
+using Shouldly;
+using TestStack.BDDfy;
+using Xunit;
+
+namespace ServiceBusDepot.Testing.UnitTests.Core.Features.ServiceBusConnection.Index
 {
-    using ServiceBusDepot.Core.Features.ServiceBusConnection.Index;
-    using Shouldly;
-    using System.Collections.Generic;
-    using TestStack.BDDfy;
-    using Xunit;
     using Entities = ServiceBusDepot.Core.Entities;
 
     public class QueryHandlerSpecs : ServiceBusConnectionSpecs

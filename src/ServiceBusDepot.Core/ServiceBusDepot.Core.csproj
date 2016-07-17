@@ -185,6 +185,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Database\ServiceBusDepotContext.cs" />
+    <Compile Include="Features\Queue\Inspect\Message.cs" />
+    <Compile Include="Features\Queue\Inspect\Model.cs" />
+    <Compile Include="Features\Queue\Inspect\Query.cs" />
+    <Compile Include="Features\Queue\Inspect\QueryHandler.cs" />
+    <Compile Include="Features\Queue\MappingProfile.cs" />
     <Compile Include="Features\ServiceBusConnection\Create\Command.cs" />
     <Compile Include="Features\ServiceBusConnection\Create\CommandHandler.cs" />
     <Compile Include="Features\ServiceBusConnection\Details\Model.cs" />

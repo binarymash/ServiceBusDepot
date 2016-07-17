@@ -1,5 +1,6 @@
 ﻿using System;
 using MediatR;
+using System.Collections.Generic;
 
 namespace ServiceBusDepot.ConsoleHost.Features.ServiceBusConnections.Details
 {
@@ -14,7 +15,37 @@ namespace ServiceBusDepot.ConsoleHost.Features.ServiceBusConnections.Details
             var request = new Core.Features.ServiceBusConnection.Details.Query(message.ServiceBusConnectionId);
             var connectionDetails = Mediator.SendAsync(request).ConfigureAwait(false).GetAwaiter().GetResult();
 
-            return GetNextAction(new Application.Exit.PageOption("X"));
+            var queueDictionary = new Dictionary<int, Core.Features.ServiceBusConnection.Details.Queue>();
+
+            int queueKey = 0;
+            foreach (var queue in connectionDetails.Queues)
+            {
+                queueDictionary.Add(++queueKey, queue);
+            }
+
+            foreach(var key in queueDictionary.Keys)
+            {
+                System.Console.Write("Path: ");
+                using (ConsoleColorManager.Data)
+                {
+                    System.Console.Write(queueDictionary[key].Path);
+                }
+                System.Console.Write(" (");
+                using (ConsoleColorManager.Data)
+                {
+                    System.Console.Write(queueDictionary[key].MessageCount);
+                }
+                System.Console.WriteLine(" messages)");
+            }
+
+            var pageOptions = new List<Features.PageOption>();
+            foreach(var key in queueDictionary.Keys)
+            {
+                pageOptions.Add(new Features.Queues.Inspect.PageOption(key.ToString(), message.ServiceBusConnectionId, queueDictionary[key].Path));
+            }
+            pageOptions.Add(new Application.Exit.PageOption("X"));
+
+            return GetNextAction(pageOptions);
         }
     }
 }

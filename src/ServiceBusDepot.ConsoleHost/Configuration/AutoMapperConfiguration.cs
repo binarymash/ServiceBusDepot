@@ -8,9 +8,11 @@ namespace ServiceBusDepot.ConsoleHost.Configuration
     {
         protected override void Initialize()
         {
+            //TODO: reflection
             var profiles = new List<Profile>
             {
-                new ServiceBusDepot.Core.Features.ServiceBusConnection.MappingProfile()
+                new Core.Features.ServiceBusConnection.MappingProfile(),
+                new Core.Features.Queue.MappingProfile()
             };
 
             var config = new MapperConfiguration(cfg =>
